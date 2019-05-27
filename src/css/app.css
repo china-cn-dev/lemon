@@ -1,0 +1,96 @@
+.app {
+  text-align: center;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+}
+
+.app footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.24rem;
+  color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 0.99rem;
+  border-top: 1px solid #dadada;
+  background-color: #ffffff;
+  width: 100vw;
+}
+
+.app footer a{
+  display: block;
+  width: 25vw;
+  height: 0.99rem;
+  color: #333333;
+}
+
+.app footer .home,
+.app footer .category,
+.app footer .discover,
+.app footer .my{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.app footer .home::before,
+.app footer .category::before,
+.app footer .discover::before,
+.app footer .my::before{
+  content: '';
+  display: block;
+  width: 0.47rem;
+  height: 0.43rem;
+  margin: 0.1rem 0 0.06rem 0;
+}
+
+.app footer .home::before{
+  background: url('../assets/home.png') no-repeat center;
+  background-size: 100%;
+}
+
+.app footer .category::before{
+  background: url('../assets/category.png') no-repeat center;
+  background-size: 100%;
+}
+
+.app footer .discover::before{
+  background: url('../assets/discover.png') no-repeat center;
+  background-size: 100%;
+}
+
+.app footer .my::before{
+  background: url('../assets/my.png') no-repeat center;
+  background-size: 100%;
+}
+
+.app footer .current.home::before{
+  background: url('../assets/home_active.png') no-repeat center;
+  background-size: 100%;
+}
+
+.app footer .current.category::before{
+  background: url('../assets/category_active.png') no-repeat center;
+  background-size: 100%;
+}
+.app footer .current.discover::before{
+  background: url('../assets/discover_active.png') no-repeat center;
+  background-size: 100%;
+}
+.app footer .current.my::before{
+  background: url('../assets/my_active.png') no-repeat center;
+  background-size: 100%;
+}
+
+.app footer .current{
+  color: #e60000;
+}
+
+.app .main{
+  font-size: 0.24rem;
+  width: 100vw;
+  height: calc(100vh - 1rem);
+}

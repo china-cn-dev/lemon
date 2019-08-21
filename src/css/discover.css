@@ -1,0 +1,285 @@
+.top-bar {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 0.9rem;
+    font-size: 0.34rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.top-bar .back {
+    position: absolute;
+    left: 0.25rem;
+    top: 0.28rem;
+}
+
+.nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.nav-bar ul li {
+    font-size: 0.3rem;
+    margin: 0 0.7rem;
+    height: 0.85rem;
+    line-height: 0.85rem;
+}
+
+.nav-bar ul li a {
+    display: block;
+    width: 0.63rem;
+}
+
+.nav-bar ul li .active {
+    color: #e60000;
+    position: relative;
+}
+
+.nav-bar ul li .active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0.63rem;
+    height: 0.04rem;
+    background-color: #e60000;
+}
+
+
+.purchase-list {
+    margin-top: 0.1rem;
+}
+
+.purchase-list ul li {
+    background-color: #fff;
+    padding: 0.5rem 0.25rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.purchase-list .caption {
+    font-size: 0.3rem;
+    margin-bottom: 0.25rem;
+}
+
+.purchase-list .industry,
+.purchase-list .quote {
+    font-size: 0.2rem;
+    color: #b2b2b2;
+}
+
+.purchase-list .quote {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0.1rem;
+}
+
+.business .carousel-wrapper .item {
+    width: 100%;
+    height: 3.8rem;
+    position: relative;
+}
+
+.business .carousel-wrapper .item>img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.business .carousel-wrapper .item>.txt {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 0.3rem;
+    padding-left: 0.25rem;
+}
+
+.slider-decorator-0 {
+    bottom: 0.14rem !important;
+    right: 0.25rem !important;
+    width: auto !important;
+}
+
+
+.news ul li {
+    padding: 0.4rem 0.25rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+}
+
+.news ul li>img {
+    width: 2rem;
+    height: 1.5rem;
+    margin-right: 0.25rem;
+}
+
+.news ul li .caption {
+    font-size: 0.3rem;
+    line-height: 0.48rem;
+    height: 0.96rem;
+    overflow: hidden;
+}
+
+.news ul li .pendant {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 0.22rem;
+    color: #b2b2b2;
+    margin-top: 0.3rem;
+}
+
+.news ul li .pendant .views {
+    position: relative;
+    padding-left: 0.38rem;
+    margin-right: 0.2rem;
+}
+
+.news ul li .pendant .publish-date {
+    position: relative;
+    padding-left: 0.3rem;
+}
+
+.news ul li .pendant .views::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.06rem;
+    width: 0.28rem;
+    height: 0.16rem;
+    background: url('../assets/view.png') no-repeat center;
+    background-size: 100%;
+}
+
+
+.news ul li .pendant .publish-date::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.02rem;
+    width: 0.21rem;
+    height: 0.21rem;
+    background: url('../assets/date.png') no-repeat center;
+    background-size: 100%;
+}
+
+.merchant {
+    margin-top: 0.1rem;
+}
+
+.merchant .classify {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0.25rem;
+    background-color: #fff;
+    color: #b2b2b2;
+    font-size: 0.26rem;
+    height: 0.78rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.merchant .classify ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.merchant .classify ul li {
+    padding: 0 0.24rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    min-width: 0.62rem;
+}
+
+.merchant .classify ul .current {
+    color: #333;
+    background-color: #f0f0f0;
+    border-radius: 0.3rem;
+}
+
+
+.merchant .classify .add-btn {
+    width: 0.27rem;
+    height: 0.27rem;
+    background: url('../assets/add.jpg') no-repeat center;
+    background-size: 100%;
+    margin-left: 0.1rem;
+}
+.merchant .ranking{
+    width: 100%;
+    height: 2.5rem;
+}
+
+.merchant .companies ul li{
+    display: flex;
+    flex-direction: row;
+    padding: 0.4rem 0.25rem;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #fff;
+}
+
+.merchant .companies ul li:last-child{
+    border-bottom: none;
+}
+
+.merchant .companies ul li>.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.98rem;
+    height: 1.98rem;
+    margin-right: 0.25rem;
+    border: 1px solid #f0f0f0;
+}
+
+.merchant .companies ul li>.left img{
+    max-width: 1.98rem;
+    max-height: 1.98rem;
+}
+
+.merchant .companies ul li>.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.merchant .companies .caption{
+    font-size: 0.3rem;
+    line-height: 0.44rem;
+    margin-bottom: 0.2rem;
+}
+
+.merchant .companies .main-business{
+    font-size: 0.24rem;
+    color: #b2b2b2;
+}
+.merchant .companies .line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.22rem;
+    color: #b2b2b2;
+}
+
+.merchant .companies .xmt::after{
+    content: '';
+    display: inline-block;
+    width: 1.1rem;
+    height: 0.34rem;
+    background: url('../assets/xmt.jpg') no-repeat center;
+    background-size: 100%;
+    vertical-align: -0.06rem;
+    margin-left: 0.1rem;
+}

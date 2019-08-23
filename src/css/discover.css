@@ -1,21 +1,4 @@
-.top-bar {
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 0.9rem;
-    font-size: 0.34rem;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.top-bar .back {
-    position: absolute;
-    left: 0.25rem;
-    top: 0.28rem;
-}
-
-.nav-bar ul {
+.nav-tabs ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -23,24 +6,24 @@
     background-color: #fff;
 }
 
-.nav-bar ul li {
+.nav-tabs ul li {
     font-size: 0.3rem;
     margin: 0 0.7rem;
     height: 0.85rem;
     line-height: 0.85rem;
 }
 
-.nav-bar ul li a {
+.nav-tabs ul li a {
     display: block;
     width: 0.63rem;
 }
 
-.nav-bar ul li .active {
+.nav-tabs ul li .active {
     color: #e60000;
     position: relative;
 }
 
-.nav-bar ul li .active::after {
+.nav-tabs ul li .active::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -195,6 +178,9 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 0.5rem;
+    overflow: hidden;
 }
 
 .merchant .classify ul li {
@@ -218,12 +204,13 @@
     background-size: 100%;
     margin-left: 0.1rem;
 }
-.merchant .ranking{
+
+.merchant .ranking {
     width: 100%;
     height: 2.5rem;
 }
 
-.merchant .companies ul li{
+.merchant .companies ul li {
     display: flex;
     flex-direction: row;
     padding: 0.4rem 0.25rem;
@@ -231,7 +218,7 @@
     background-color: #fff;
 }
 
-.merchant .companies ul li:last-child{
+.merchant .companies ul li:last-child {
     border-bottom: none;
 }
 
@@ -245,27 +232,29 @@
     border: 1px solid #f0f0f0;
 }
 
-.merchant .companies ul li>.left img{
+.merchant .companies ul li>.left img {
     max-width: 1.98rem;
     max-height: 1.98rem;
 }
 
-.merchant .companies ul li>.right{
+.merchant .companies ul li>.right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.merchant .companies .caption{
+
+.merchant .companies .caption {
     font-size: 0.3rem;
     line-height: 0.44rem;
     margin-bottom: 0.2rem;
 }
 
-.merchant .companies .main-business{
+.merchant .companies .main-business {
     font-size: 0.24rem;
     color: #b2b2b2;
 }
-.merchant .companies .line{
+
+.merchant .companies .line {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -273,7 +262,7 @@
     color: #b2b2b2;
 }
 
-.merchant .companies .xmt::after{
+.merchant .companies .xmt::after {
     content: '';
     display: inline-block;
     width: 1.1rem;
@@ -282,4 +271,93 @@
     background-size: 100%;
     vertical-align: -0.06rem;
     margin-left: 0.1rem;
+}
+
+.merchant .industry-drawer .am-drawer-sidebar {
+    background-color: #fcfcfc;
+    height: calc(100vh - 1.75rem);
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0.3rem 0rem;
+
+}
+
+.panel .close-btn {
+    margin-left: 0.25rem;
+}
+
+.panel .line {
+    font-size: 0.22rem;
+    color: #b2b2b2;
+    margin-top: 0.4rem;
+    padding: 0 0.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.panel .line em {
+    font-size: 0.3rem;
+    color: #333;
+    margin-right: 0.2rem;
+}
+
+.panel .line .btn {
+    font-size: 0.24rem;
+    color: #e60000;
+    border: 1px solid #e60000;
+    border-radius: 0.2rem;
+    width: 0.84rem;
+    height: 0.38rem;
+    line-height: 0.38rem;
+    text-align: center;
+}
+
+.panel .group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0.4rem;
+}
+
+.panel .group .item {
+    min-width: 0.96rem;
+    height: 0.82rem;
+    line-height: 0.82rem;
+    text-align: center;
+    background-color: #f7f7f7;
+    margin-left: 0.25rem;
+    margin-bottom: 0.24rem;
+    border-radius: 0.1rem;
+    position: relative;
+    padding: 0 0.3rem;
+}
+
+.panel .group i {
+    position: absolute;
+    top: -0.09rem;
+    right: -0.06rem;
+    width: 0.34rem;
+    height: 0.34rem;
+    background: url('../assets/remove.png') no-repeat center;
+    background-size: 100%;
+    display: none;
+}
+
+.panel .hot .item {
+    background-color: #fff;
+    box-shadow: 0 0 0.05rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.panel .editable i {
+    display: block;
+}
+
+.discover .lock {
+    height: calc(100vh - 2.86rem);
+    overflow: hidden;
 }

@@ -6,6 +6,8 @@ import Category from './views/category'
 import Discover from './views/discover'
 import My from './views/my'
 import Search from './views/search'
+import News from './views/news'
+import Buy from './views/buy'
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/discover" component={Discover}></Route>
           <Route path="/my" component={My}></Route>
           <Route path="/search" component={Search}></Route>
+          <Route path="/news/:id" component={News}></Route>
+          <Route path="/buy/:id" component={Buy}></Route>
         </Switch>
     </Router>
   );

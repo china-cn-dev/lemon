@@ -15,8 +15,8 @@ export default class Search extends React.Component{
     }
     render(){
         return(
-            <div className="app search">
-                <div className="top-bar">
+            <div className="search">
+                <header className="nav-bar">
                     <Link className="back" to="/"></Link>
                     <ul>
                         {
@@ -25,7 +25,7 @@ export default class Search extends React.Component{
                             ))
                         }
                     </ul>
-                </div>
+                </header>
                 <div className="search-box">
                     <input placeholder="输入关键词，开始搜索"/>
                 </div>

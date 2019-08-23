@@ -1,0 +1,109 @@
+.news {
+    background-color: #fff;
+    padding-bottom: 0.35rem;
+}
+
+.news> .caption {
+    padding: 0.28rem 0.25rem;
+    font-size: 0.46rem;
+    line-height: 0.64rem;
+}
+
+.news .article-info {
+    color: #b2b2b2;
+    font-size: 0.24rem;
+    line-height: 0.48rem;
+    padding: 0 0.25rem;
+}
+
+.news .illustration {
+    width: 7rem;
+    height: 4.98rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.3rem auto 0;
+}
+
+.news .illustration img {
+    max-width: 7rem;
+    max-height: 4.98rem;
+    object-fit: contain;
+}
+
+.news .content {
+    margin-top: 0.25rem;
+}
+
+.news .content>p {
+    font-size: 0.34rem;
+    line-height: 0.58rem;
+    padding: 0 0.25rem 0.5rem 0.25rem;
+}
+
+.contribute {
+    background-color: #f0f0f0;
+    padding: 0.1rem 0;
+}
+
+.contribute .inner {
+    background-color: #fff;
+    padding: 0.3rem 0.25rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.contribute .left-block {
+    width: 1.98rem;
+    height: 1.98rem;
+    border: 1px solid #f0f0f0;
+    margin-right: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contribute .left-block>img {
+    max-width: 1.98rem;
+    max-height: 1.98rem;
+    object-fit: contain;
+}
+
+.contribute .right-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contribute .right-block > .caption{
+    font-size: 0.3rem;
+    line-height: 0.46rem;
+    word-break: break-all;
+    max-height: 0.92rem;
+    overflow: hidden;
+}
+
+.contribute .right-block > .price{
+    font-size: 0.32rem;
+    color: #e60000;
+}
+
+.contribute .right-block > .price em{
+    font-size: 0.22rem;
+    margin-right: 0.03rem;
+    vertical-align: 0.02rem;
+}
+
+.news .pagination{
+    font-size: 0.3rem;
+    line-height: 0.48rem;
+    margin: 0 0.25rem;
+    padding-top: 0.52rem;
+    border-top: 1px solid #f0f0f0;
+}
+.news .pagination p{
+    margin-bottom: 0.25rem;
+}
+.news .pagination p >span{
+    margin-right: 0.15rem;
+}

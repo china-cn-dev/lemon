@@ -1,9 +1,10 @@
-.buy{
+.buy {
     min-height: calc(100vh - 1rem);
     padding-bottom: 1rem;
     background: #fff url('../assets/buy_bg.jpg') no-repeat 0 0;
     background-size: 100%;
 }
+
 .buy * {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -56,10 +57,9 @@
 .buy .goods ul li {
     display: flex;
     flex-direction: row;
-    margin: 0 0.25rem;
+    margin: 0 0.25rem 0.1rem 0.25rem;
     border: 1px solid #f0f0f0;
     padding: 0.4rem 0.25rem;
-    margin-bottom: 0.1rem;
     background-color: #fff;
 }
 
@@ -109,13 +109,14 @@
     padding: 0 0.25rem;
 }
 
-.buy .make-offer{
+.buy .make-offer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
 
 }
+
 .buy .make-offer button {
     width: 100%;
     height: 1rem;
@@ -128,28 +129,223 @@
     outline: none;
 }
 
-.offer-sheet-drawer .am-drawer-sidebar{
+.offer-sheet-drawer .am-drawer-sidebar {
     background-color: #fff;
 }
 
-.offer-sheet{
+.offer-sheet {
     position: relative;
     min-height: 3rem;
+    max-height: calc(100vh - 1rem);
 }
 
-.offer-sheet .close-btn{
+.offer-sheet .close-btn {
     position: absolute;
     top: 0.3rem;
     left: 0.25rem;
 }
 
-.offer-sheet .caption{
+.offer-sheet .caption {
     font-size: 0.36rem;
     padding: 0.45rem 0 0.5rem 0;
     text-align: center;
 }
 
-.offer-sheet .goods .info input{
+.offer-sheet .goods ul li {
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.offer-sheet .goods ul li:first-child {
+    border-top-width: 1px;
+}
+
+.offer-sheet .goods .offer {
+    color: #333;
+    font-size: 0.26rem;
+}
+
+.offer-sheet .goods .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.offer-sheet .goods .info input {
     border: none;
     outline: none;
+    padding: 0 0.1rem;
+    margin: 0 0.1rem;
+}
+
+.offer-sheet .goods .offer .price {
+    width: 1.4rem;
+    border-bottom: 0.02rem solid #333;
+}
+
+.offer-sheet .goods .offer .unit {
+    width: 0.8rem;
+    border-bottom: 0.02rem solid #333;
+}
+
+.offer-sheet .marked {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 0.26rem;
+    color: #b2b2b2;
+    padding: 0.4rem 0.25rem;
+}
+
+.offer-sheet .marked label {
+    position: relative;
+    display: block;
+    height: 0.32rem;
+    line-height: 0.32rem;
+    padding-left: 0.42rem;
+    margin-left: 0.5rem;
+}
+
+.offer-sheet .marked .check-circle {
+    color: #66bb00;
+}
+
+.offer-sheet .marked label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.32rem;
+    height: 0.32rem;
+}
+
+.offer-sheet .form-group {
+    padding: 0 0.25rem;
+}
+
+.offer-sheet .form-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 0.7rem;
+    font-size: 0.26rem;
+    margin-bottom: 0.2rem;
+}
+
+.offer-sheet .form-control>label {
+    display: block;
+    min-width: 1.3rem;
+    text-align: right;
+}
+
+.offer-sheet .form-control > input[type="text"],
+.offer-sheet .form-control .date-picker {
+    border: 1px solid #dadada;
+    border-radius: 0.03rem;
+    height: 0.7rem;
+    padding: 0 0.1rem;
+    margin: 0 0.2rem;
+}
+
+.offer-sheet .form-control .date-picker {
+    width: 2.84rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.offer-sheet .form-control .date-picker::after {
+    position: absolute;
+    right: 0.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    width: 0.36rem;
+    height: 0.37rem;
+    background: url('../assets/calendar.png') no-repeat center;
+    background-size: 100%;
+}
+
+.offer-sheet .form-control .date-picker input{
+    border: none;
+    width: 2.3rem;
+}
+
+.offer-sheet .form-control .upload-box {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: 0.2rem;
+    border: 1px dashed #dadada;
+    position: relative;
+    overflow: hidden;
+}
+
+.offer-sheet .form-control .upload-box::before {
+    content: '';
+    position: absolute;
+    width: 0.6rem;
+    height: 1px;
+    top: 50%;
+    left: 50%;
+    border-top: 1px dashed #dadada;
+    transform: translate(-50%, -50%);
+}
+
+.offer-sheet .form-control .upload-box::after {
+    content: '';
+    position: absolute;
+    height: 0.6rem;
+    width: 1px;
+    top: 50%;
+    left: 50%;
+    border-left: 1px dashed #dadada;
+    transform: translate(-50%, -50%);
+}
+
+.offer-sheet .form-control input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0;
+}
+
+.offer-sheet .contact {
+    font-size: 0.26rem;
+}
+
+.offer-sheet .contact>p {
+    display: flex;
+    justify-content: space-between;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    background-color: #fafafa;
+    padding-left: 0.5rem;
+    padding-right: 0.25rem;
+}
+
+.offer-sheet .contact>p .edit {
+    font-size: 0.22rem;
+    color: #e60000;
+}
+
+.offer-sheet .contact>ul {
+    line-height: 0.48rem;
+    padding: 0.26rem 0.25rem 0.26rem 0.5rem;
+}
+
+.offer-sheet .submit-offer-sheet {
+    width: 100%;
+    height: 1rem;
+    border: none;
+    color: #fff;
+    font-size: 0.3rem;
+    background-color: #e60000;
 }

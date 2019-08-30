@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import { Drawer, DatePicker, List, InputItem} from 'antd-mobile'
+import { Drawer, DatePicker,List} from 'antd-mobile'
 import '../css/buy.css'
 import t19 from '../assets/temp19.jpg'
 export default class PurchaseDetail extends React.Component{
@@ -12,12 +12,20 @@ export default class PurchaseDetail extends React.Component{
                 {id:1,url:t19,title:'台湾DR-350B气模枪配件',price:'32元/台',amount:'1000台',remark:'贵的不要 贵的不要 贵的不要'},
                 {id:2,url:t19,title:'台湾DR-350B气模枪配件',price:'32元/台',amount:'1000台'}
             ],
-            startDate: new Date()
+            expireDate:''
         }
         this.onOpenChange = this.onOpenChange.bind(this);
+        this.onOk = this.onOk.bind(this);
     }
     onOpenChange(){
         this.setState({open:!this.state.open});
+    }
+    onOk(date){
+        console.log('onOk: ' + date)
+        console.log('onOk: ' + date.getTime())
+        this.setState({
+            expireDate: date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
+        })
     }
     render(){
         const sidebar = this.renderOfferSheet();
@@ -77,59 +85,62 @@ export default class PurchaseDetail extends React.Component{
                         <li>
                             <div className="thumb"><img src={t19} alt=""/></div>
                             <div className="info">
-                                <p className="title">台湾DR-350B气模枪配件</p>
-                                <p>采购量：1000台</p>
-                                <div className="">
-                                    <div>单价<input type="text"/>元</div>
-                                    <div>单位<input type="text"/></div>
+                                <div>
+                                    <p className="title">台湾DR-350B气模枪配件</p>
+                                    <p>采购量：1000台</p>
+                                </div>
+                                <div className="offer">
+                                    单价<input className="price" type="text"/>元&nbsp;&nbsp;单位<input className="unit" type="text"/>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div className="thumb"><img src={t19} alt=""/></div>
                             <div className="info">
-                                <p className="title">台湾DR-350B气模枪配件</p>
-                                <p>采购量：1000台</p>
                                 <div>
-                                    <div>单价<input type="text"/>元</div>
-                                    <div>单位<input type="text"/></div>
+                                    <p className="title">台湾DR-350B气模枪配件</p>
+                                    <p>采购量：1000台</p>
+                                </div>
+                                <div className="offer">
+                                    单价<input className="price" type="text"/>元&nbsp;&nbsp;单位<input className="unit" type="text"/>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <div className="tags"></div>
-                <div className="group">
-                    <div className="line">
+                <div className="marked">
+                    <label className="check-circle-o">报价含运费</label>
+                    <label className="check-circle">报价含税</label>
+                </div>
+                <div className="form-group">
+                    <div className="form-control">
                         <label>报价有效期</label>
-                        <div>
-                            <input type="hidden"/>
-                            <DatePicker mode="date" value={this.state.startDate}>
-                                <List.Item>click</List.Item>
-                            </DatePicker>
-                        </div>
+                        <DatePicker mode="date" onOk={this.onOk}>
+                            <div className="date-picker">{this.state.expireDate}</div>
+                        </DatePicker>
                     </div>
-                    <div className="line">
+                    <div className="form-control">
                         <label>交货期</label>
-                        <div><input type="text"/></div>天
+                        <input className="day" type="text" style={{width:'1.2rem'}}/>天
                     </div>
-                    <div className="line">
+                    <div className="form-control">
                         <label>补充说明</label>
-                        <div><input type="text"/></div>天
+                        <input className="complement" type="text" style={{width:'5.5rem'}}/>
                     </div>
-                    <div className="line">
+                    <div className="form-control">
                         <label>上传图片</label>
-                        <div><input type="file"/></div>天
+                        <div className="upload-box"><input type="file"/></div>
                     </div>
                 </div>
-                <div>
-                    <div>我的联系方式</div>
-                    <div>
-                        <p>老蒋科贸(北京)有限责任公司</p>
-                        <p>姓名：李萧</p>
-                        <p>电话：13636363636</p>
-                    </div>
+                <div className="contact">
+                    <p><span>我的联系方式</span><span className="edit">编辑</span></p>
+                    <ul>
+                        <li>老蒋科贸(北京)有限责任公司</li>
+                        <li>姓名：李萧</li>
+                        <li>电话：13636363636</li>
+                    </ul>
                 </div>
+                <button className="submit-offer-sheet">提交报价</button>
             </div>
         )
     }

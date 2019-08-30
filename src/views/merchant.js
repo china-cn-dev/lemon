@@ -1,5 +1,6 @@
 import React from 'react'
 import { Drawer } from 'antd-mobile'
+import { Link } from 'react-router-dom'
 import '../css/discover.css'
 import ranking from '../assets/ranking.jpg'
 import t15 from '../assets/temp15.jpg'
@@ -54,7 +55,7 @@ export default class Merchant extends React.Component{
                     </ul>
                     <span className="add-btn" onClick={this.onOpenChange}></span>
                 </div>
-                <img className="ranking" src={ranking} alt=""/>
+                <Link to="/ranking"><img className="focus-img" src={ranking} alt=""/></Link>
                 <div className="companies">
                     <ul>
                         <li>

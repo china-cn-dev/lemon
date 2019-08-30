@@ -168,7 +168,7 @@ img{
     justify-content: center;
     align-items: center;
     font-size: 0.34rem;
-    height: 0.9rem;
+    min-height: 0.9rem;
     position: relative;
     background-color: #fff;
     border-bottom: 1px solid #f0f0f0;
@@ -197,12 +197,12 @@ img{
 .search-box {
     background-color: #fff;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
+    padding: 0 0.25rem;
 }
 
 .search-box input {
-    width: calc(100% - 1.16rem);
     height: 0.66rem;
     padding-left: 0.66rem;
     border: 0.02rem solid #f0f0f0;
@@ -224,5 +224,48 @@ img{
     width: 0.3rem;
     height: 0.28rem;
     background: url('../assets/close.png') no-repeat center;
+    background-size: 100%;
+}
+
+.check-circle-o::before {
+    background: url('../assets/check_o.png') no-repeat center;
+    background-size: 100%;
+}
+
+.check-circle::before {
+    background: url('../assets/check.png') no-repeat center;
+    background-size: 100%;
+}
+
+.xmt::after {
+    content: '';
+    display: inline-block;
+    width: 1.1rem;
+    height: 0.34rem;
+    background: url('../assets/xmt.jpg') no-repeat center;
+    background-size: 100%;
+    vertical-align: -0.06rem;
+    margin-left: 0.1rem;
+}
+
+.circle-back {
+    position: absolute;
+    left: 0.14rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.5rem;
+    height: 0.5rem;
+    background: url('../assets/circle_back.png') no-repeat center;
+    background-size: 100%;
+}
+
+.circle-more {
+    position: absolute;
+    right: 0.14rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.5rem;
+    height: 0.5rem;
+    background: url('../assets/circle_more.png') no-repeat center;
     background-size: 100%;
 }

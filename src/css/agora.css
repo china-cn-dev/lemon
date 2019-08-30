@@ -1,0 +1,135 @@
+.agora .nav-bar {
+    justify-content: flex-start;
+    border-bottom-width: 0;
+}
+
+.agora .nav-bar .search-box {
+    margin-left: 0.47rem;
+}
+
+.agora .nav-bar .search-box>input {
+    border: none;
+    outline: none;
+    background-color: #f0f0f0;
+    height: 0.7rem;
+    width: calc(100vw - 1.63rem);
+    border-radius: 0.03rem;
+}
+
+.agora nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.3rem;
+    height: 0.85rem;
+    padding: 0 0.25rem;
+    line-height: 0.85rem;
+    background-color: #fff;
+}
+
+.agora nav .active {
+    position: relative;
+    color: #e60000;
+}
+
+.agora nav .active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.04rem;
+    background-color: #e60000;
+}
+
+.agora nav>.filter {
+    position: relative;
+}
+
+.agora nav>.filter::after {
+    content: '';
+    position: absolute;
+    top: 0.27rem;
+    right: -0.32rem;
+    width: 0.28rem;
+    height: 0.31rem;
+    background: url('../assets/filter.png') no-repeat center;
+    background-size: 100%;
+}
+
+.agora nav>.switch-layout {
+    width: 0.32rem;
+    height: 0.31rem;
+    background: url('../assets/layout.png') no-repeat center;
+    background-size: 100%;
+}
+
+.agora>.products {
+    margin-top: 0.1rem;
+    background-color: #fff;
+}
+
+.agora>.products li {
+    display: flex;
+    padding: 0.3rem 0.25rem;
+}
+
+.agora>.products .thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #f0f0f0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.agora>.products .thumb img {
+    max-width: 1.98rem;
+    max-height: 1.98rem;
+    object-fit: contain;
+}
+
+.agora>.products .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 0.25rem;
+}
+
+.agora>.products .title {
+    font-size: 0.26rem;
+    line-height: 0.38rem;
+    max-height: 0.76rem;
+    overflow: hidden;
+    margin-bottom: 0.16rem;
+    word-break: break-all;
+}
+
+.agora>.products .xmt::after {
+    margin-left: 0;
+}
+
+.agora>.products .line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.agora>.products .price {
+    color: #e60000;
+    font-size: 0.22rem;
+}
+
+.agora>.products .price em {
+    font-size: 0.32rem;
+    vertical-align: -0.02rem;
+    margin: 0 0.02rem;
+}
+
+.agora>.products .addr {
+    font-size: 0.22rem;
+    color: #b2b2b2;
+}

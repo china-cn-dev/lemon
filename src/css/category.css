@@ -5,7 +5,12 @@
 }
 
 .category .search-box {
-    padding: 0.2rem 0;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.category .search-box input{
+    width: 100%;
 }
 
 .category .search-box::before {

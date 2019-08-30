@@ -34,6 +34,22 @@
     left: 0;
 }
 
+.search .search-box {
+    justify-content: space-between;
+}
+
+.search .search-box input {
+    width: 5.1rem;
+}
+
+.search-box .search-btn {
+    border: none;
+    color: #fff;
+    width: 1rem;
+    font-size: 0.24rem;
+    background: #e60000;
+}
+
 .search .hot {
     background-color: #fff;
 }

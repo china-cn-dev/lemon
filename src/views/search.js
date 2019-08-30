@@ -5,13 +5,25 @@ export default class Search extends React.Component{
     constructor(props){
         super(props);
         this.state = {
+            keyword:'',
             searchType: 'chanpin',
             types:[{key:'chanpin',title:'产品'},{key:'qiugou',title:'求购'},{key:'gongsi',title:'公司'}]
         }
         this.changeSearchType = this.changeSearchType.bind(this);
+        this.onSearch = this.onSearch.bind(this);
+        this.onKeywordChange = this.onKeywordChange.bind(this);
     }
     changeSearchType(e){
         console.log(e)
+    }
+    onSearch(){
+        console.log(this.state.keyword)
+        console.log(this.props.history.push({pathname:'agora',state:{kw:this.state.keyword}}))
+    }
+    onKeywordChange(e){
+        this.setState({
+            keyword:e.target.value
+        })
     }
     render(){
         return(
@@ -27,7 +39,8 @@ export default class Search extends React.Component{
                     </ul>
                 </header>
                 <div className="search-box">
-                    <input placeholder="输入关键词，开始搜索"/>
+                    <input value={this.state.keyword} placeholder="输入关键词，开始搜索" onChange={this.onKeywordChange}/>
+                    <button className="search-btn" onClick={this.onSearch}>搜索</button>
                 </div>
                 <div className="hot">
                     <p>热门搜索</p>

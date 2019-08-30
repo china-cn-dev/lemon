@@ -34,7 +34,7 @@ export default class Home extends React.Component{
                             <div className="item"> <img src={tempImg1} alt=""/> </div>
                         </Carousel>
                     </div>
-                    <div className="product">
+                    <div className="subject-box">
                         <div className="left">
                             <p>安平丝网</p>
                             <span>丝网批发集散地</span>

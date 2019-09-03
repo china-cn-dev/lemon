@@ -1,0 +1,78 @@
+.company-list .nav-bar {
+    justify-content: flex-start;
+    border-bottom-width: 0;
+}
+
+.company-list .nav-bar .search-box {
+    margin-left: 0.47rem;
+}
+
+.company-list .nav-bar .search-box>input {
+    border: none;
+    outline: none;
+    background-color: #f0f0f0;
+    height: 0.7rem;
+    width: calc(100vw - 2.35rem);
+    border-radius: 0.03rem;
+}
+
+.company-list .nav-bar .filter {
+    font-size: 0.26rem;
+    color: #b2b2b2;
+}
+
+.company-list .companies {
+    margin-top: 0.1rem;
+}
+
+.company-list .companies ul li {
+    display: flex;
+    flex-direction: row;
+    padding: 0.4rem 0.25rem;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #fff;
+}
+
+.company-list .companies ul li:last-child {
+    border-bottom: none;
+}
+
+.company-list .companies ul li>.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.98rem;
+    height: 1.98rem;
+    margin-right: 0.25rem;
+    border: 1px solid #f0f0f0;
+}
+
+.company-list .companies ul li>.left img {
+    max-width: 1.98rem;
+    max-height: 1.98rem;
+}
+
+.company-list .companies ul li>.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.company-list .companies .caption {
+    font-size: 0.3rem;
+    line-height: 0.44rem;
+    margin-bottom: 0.2rem;
+}
+
+.company-list .companies .main-business {
+    font-size: 0.24rem;
+    color: #b2b2b2;
+}
+
+.company-list .companies .line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.22rem;
+    color: #b2b2b2;
+}

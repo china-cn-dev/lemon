@@ -9,8 +9,11 @@ import Search from './views/search'
 import News from './views/news'
 import Buy from './views/buy'
 import Ranking from './views/ranking'
-import Agora from './views/agora'
+import ProductList from './views/productlist'
+import CompanyList from './views/companylist'
+import OfferList from './views/offerlist'
 import Product from './views/product'
+import ProductDetail from './views/productdetail'
 
 function App() {
   return (
@@ -20,12 +23,15 @@ function App() {
           <Route path="/category" component={Category}></Route>
           <Route path="/discover" component={Discover}></Route>
           <Route path="/my" component={My}></Route>
-          <Route path="/search" component={Search}></Route>
+          <Route exact path="/search" component={Search}></Route>
           <Route path="/news/:id" component={News}></Route>
           <Route path="/buy/:id" component={Buy}></Route>
           <Route path="/ranking" component={Ranking}></Route>
-          <Route path="/agora" component={Agora}></Route>
-          <Route path="/product/:id" component={Product}></Route>
+          <Route path="/search/product" component={ProductList}></Route>
+          <Route path="/search/company" component={CompanyList}></Route>
+          <Route path="/search/offer" component={OfferList}></Route>
+          <Route exact path="/product/:id" component={Product}></Route>
+          <Route path="/product/:id/details" component={ProductDetail}></Route>
         </Switch>
     </Router>
   );

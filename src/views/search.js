@@ -6,24 +6,18 @@ export default class Search extends React.Component{
         super(props);
         this.state = {
             keyword:'',
-            searchType: 'chanpin',
-            types:[{key:'chanpin',title:'产品'},{key:'qiugou',title:'求购'},{key:'gongsi',title:'公司'}]
+            searchType: 'product',
+            types:[{key:'product',title:'产品'},{key:'offer',title:'求购'},{key:'company',title:'公司'}]
         }
-        this.changeSearchType = this.changeSearchType.bind(this);
         this.onSearch = this.onSearch.bind(this);
         this.onKeywordChange = this.onKeywordChange.bind(this);
     }
-    changeSearchType(e){
-        console.log(e)
-    }
     onSearch(){
-        console.log(this.state.keyword)
-        console.log(this.props.history.push({pathname:'agora',state:{kw:this.state.keyword}}))
+        let pathname = `/search/${this.state.searchType}`;
+        this.props.history.push({pathname:pathname,state:{kw:this.state.keyword}});
     }
     onKeywordChange(e){
-        this.setState({
-            keyword:e.target.value
-        })
+        this.setState({keyword:e.target.value});
     }
     render(){
         return(

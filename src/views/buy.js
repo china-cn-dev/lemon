@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import { Drawer, DatePicker,List} from 'antd-mobile'
+import { Drawer, DatePicker} from 'antd-mobile'
 import '../css/buy.css'
 import t19 from '../assets/temp19.jpg'
 export default class PurchaseDetail extends React.Component{

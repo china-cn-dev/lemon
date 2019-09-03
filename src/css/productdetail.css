@@ -1,0 +1,7 @@
+.product-detail .nav-bar{
+    font-size: 0.34rem;
+}
+
+.product-detail .nav-bar >.active{
+    color: #e60000;
+}

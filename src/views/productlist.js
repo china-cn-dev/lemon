@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../css/agora.css'
+import SearchBox from './common/searchbox.js'
+import '../css/productlist.css'
 import t18 from '../assets/temp18.jpg'
 
-export default class Agora extends React.Component {
+export default class ProductList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,8 +16,11 @@ export default class Agora extends React.Component {
                 { id: 3, url: t18, title: '内置泵吸式二氧化碳测定仪TD500SH-CO2_CO2气体检测仪', vip: 'xmt', price: '68.00', addr: '河北  廊坊' },
                 { id: 4, url: t18, title: '内置泵吸式二氧化碳测定仪TD500SH-CO2_CO2气体检测仪', vip: 'xmt', price: '68.00', addr: '河北  廊坊' },
                 { id: 5, url: t18, title: '内置泵吸式二氧化碳测定仪TD500SH-CO2_CO2气体检测仪', vip: 'xmt', price: '68.00', addr: '河北  廊坊' },
-                { id: 6, url: t18, title: '内置泵吸式二氧化碳测定仪TD500SH-CO2_CO2气体检测仪', vip: 'xmt', price: '68.00', addr: '河北  廊坊' }, { id: 7, url: t18, title: '内置泵吸式二氧化碳测定仪TD500SH-CO2_CO2气体检测仪', vip: 'xmt', price: '68.00', addr: '河北  廊坊' }
-            ]
+                { id: 6, url: t18, title: '内置泵吸式二氧化碳测定仪TD500SH-CO2_CO2气体检测仪', vip: 'xmt', price: '68.00', addr: '河北  廊坊' },
+                { id: 7, url: t18, title: '内置泵吸式二氧化碳测定仪TD500SH-CO2_CO2气体检测仪', vip: 'xmt', price: '68.00', addr: '河北  廊坊' },
+                { id: 8, url: t18, title: '内置泵吸式二氧化碳测定仪TD500SH-CO2_CO2气体检测仪', vip: 'xmt', price: '68.00', addr: '河北  廊坊' }
+            ],
+            isGrid:false
         }
         this.onKeywordChange = this.onKeywordChange.bind(this);
     }
@@ -26,19 +30,18 @@ export default class Agora extends React.Component {
     render() {
         return (
             <div className="agora">
-                <header className="nav-bar">
-                    <Link to="/search" className="back"></Link>
-                    <div className="search-box">
-                        <input placeholder="输入关键词，开始搜索" value={this.state.keyword} onChange={this.onKeywordChange}/>
-                    </div>
-                </header>
+                <SearchBox
+                    keyword={this.state.keyword}
+                    onKeywordChange={this.onKeywordChange}
+                    onBack={()=>{this.props.history.goBack()}}>
+                </SearchBox>
                 <nav>
                     <span className="active">综合</span>
                     <span>热度</span>
                     <span className="filter">筛选</span>
-                    <span className="switch-layout"></span>
+                    <span className="switch-layout" onClick={()=>{this.setState({isGrid:!this.state.isGrid})}}></span>
                 </nav>
-                <div className="products">
+                <div className={`products ${this.state.isGrid ? 'grid-layout' : 'list-layout'}`}>
                     <ul>
                         {
                             this.state.products.map(

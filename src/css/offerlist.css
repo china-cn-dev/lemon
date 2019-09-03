@@ -1,0 +1,44 @@
+.offer-list .nav-bar {
+    justify-content: flex-start;
+    border-bottom-width: 0;
+}
+
+.offer-list .nav-bar .search-box {
+    margin-left: 0.47rem;
+}
+
+.offer-list .nav-bar .search-box>input {
+    border: none;
+    outline: none;
+    background-color: #f0f0f0;
+    height: 0.7rem;
+    width: calc(100vw - 2.35rem);
+    border-radius: 0.03rem;
+}
+
+.offer-list .nav-bar .filter {
+    font-size: 0.26rem;
+    color: #b2b2b2;
+}
+
+.offer-list .offer-group {
+    background-color: #fff;
+    margin-top: 0.1rem;
+}
+.offer-list .offer-group ul li{
+    padding: 0.44rem 0.25rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.offer-list .offer-group .caption{
+    font-size: 0.3rem;
+    line-height: 0.48rem;
+    margin-bottom: 0.2rem;
+}
+
+.offer-list .offer-group .line{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.22rem;
+    color: #b2b2b2;
+}

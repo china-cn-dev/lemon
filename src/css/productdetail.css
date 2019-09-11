@@ -1,7 +1,220 @@
-.product-detail .nav-bar{
-    font-size: 0.34rem;
+.product-detail .nav-bar {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
-.product-detail .nav-bar >.active{
+.product-detail .nav-bar>a {
+    margin: 0 0.6rem;
+    line-height: 0.9rem;
+}
+
+.product-detail .nav-bar>.active {
+    position: relative;
     color: #e60000;
+}
+
+.product-detail .nav-bar>.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 0.04rem;
+    background-color: #e60000;
+}
+
+.product-detail .main-content {
+    padding-bottom: 1rem;
+}
+
+.detail-attrs .caption,
+.product-detail .main-content .caption {
+    font-size: 0.3rem;
+    text-align: center;
+    background-color: #fff;
+    padding: 0.30rem 0 0.1rem 0;
+    line-height: 0.48rem;
+}
+
+.product-detail .main-content .caption .icon-more {
+    margin-left: 0.08rem;
+}
+
+.product-detail .main-content .briefs {
+    color: #b2b2b2;
+    font-size: 0.26rem;
+    padding: 0 0.25rem;
+    line-height: 0.48rem;
+    background-color: #fff;
+}
+
+.product-detail .main-content .briefs label {
+    display: inline-block;
+    color: #333;
+    min-width: 1.46rem;
+}
+
+.product-detail .main-content .intro {
+    background-color: #fff;
+    margin-top: 0.1rem;
+    padding-bottom: 0.5rem;
+}
+
+.product-detail .main-content .intro p {
+    padding: 0.25rem 0.25rem;
+    font-size: 0.24rem;
+    line-height: 0.44rem;
+}
+
+.product-detail .main-content .intro img {
+    max-width: 100%;
+}
+
+.product-detail-drawer .am-drawer-sidebar {
+    background-color: #fff;
+}
+
+.detail-attrs {
+    max-height: calc(100vh - 1.8rem);
+}
+
+.detail-attrs ul {
+    font-size: 0.26rem;
+    line-height: 0.86rem;
+    padding: 0 0.25rem;
+}
+
+.detail-attrs ul li {
+    border-top: 1px solid #f0f0f0;
+}
+
+.detail-attrs label {
+    display: inline-block;
+    color: #b2b2b2;
+    min-width: 2.15rem;
+}
+
+.detail-attrs button {
+    height: 1rem;
+    width: 100%;
+    font-size: 0.3rem;
+    color: #fff;
+    background-color: #e60000;
+    border: none;
+    outline: none;
+}
+
+.product-nav-pop {
+    font-size: 0.3rem;
+    color: #333;
+}
+
+.product-nav-pop .am-popover-item {
+    padding: 0 0.24rem;
+}
+
+.product-nav-pop .am-popover-item-container {
+    height: 1rem;
+}
+
+.product-nav-pop .am-popover-item-icon {
+    width: 0.38rem;
+    height: 0.36rem;
+}
+
+.product-nav-pop .am-popover-item-icon img {
+    width: 0.38rem;
+    height: 0.36rem;
+    vertical-align: top;
+}
+
+
+.product-detail .fixed-bottom .left {
+    width: 2.8rem;
+    padding: 0 0.25rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.product-detail .fixed-bottom .message,
+.product-detail .fixed-bottom .collect,
+.product-detail .fixed-bottom .store {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-detail .fixed-bottom .message::before {
+    content: '';
+    display: block;
+    width: 0.41rem;
+    height: 0.36rem;
+    margin-bottom: 0.06rem;
+    background: url(../assets/message1.png) no-repeat center;
+    background-size: 100%;
+}
+
+.product-detail .fixed-bottom .collect::before {
+    content: '';
+    display: block;
+    width: 0.38rem;
+    height: 0.36rem;
+    margin-bottom: 0.06rem;
+    background: url(../assets/collect.png) no-repeat center;
+    background-size: 100%;
+}
+
+.product-detail .fixed-bottom .store::before {
+    content: '';
+    display: block;
+    width: 0.38rem;
+    height: 0.36rem;
+    margin-bottom: 0.06rem;
+    background: url(../assets/store_38x36.png) no-repeat center;
+    background-size: 100%;
+}
+
+.product-detail .fixed-bottom .qq {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.1rem;
+    height: 100%;
+    color: #e60000;
+    font-size: 0.26rem;
+    text-align: center;
+    background-color: #ffd7d7;
+}
+
+.product-detail .fixed-bottom .qq::before {
+    content: '';
+    display: block;
+    width: 0.42rem;
+    height: 0.46rem;
+    background: url('../assets/qq.png') no-repeat center;
+    background-size: 100%;
+    margin-right: 0.1rem;
+}
+
+.product-detail .fixed-bottom .phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.1rem;
+    height: 100%;
+    color: #fff;
+    font-size: 0.26rem;
+    text-align: center;
+    background-color: #e60000;
+}
+
+.product-detail .fixed-bottom .phone::before {
+    content: '';
+    display: block;
+    width: 0.45rem;
+    height: 0.44rem;
+    background: url('../assets/phone.png') no-repeat center;
+    background-size: 100%;
+    margin-right: 0.05rem;
 }

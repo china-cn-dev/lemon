@@ -174,12 +174,37 @@ img{
     border-bottom: 1px solid #f0f0f0;
 }
 
+.fixed-top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+
+.fixed-bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1rem;
+    border-top: 1px solid #dadada;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 0.22rem;
+    z-index: 9;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
 .nav-bar .back{
   position: absolute;
   left: 0.25rem;
-  top: 0.28rem;
+  top: 0rem;
   width:0.2rem;
-  height: 0.34rem;
+  height: 100%;
   background: url('../assets/back.png') no-repeat center;
   background-size: 100%;
 }
@@ -187,9 +212,9 @@ img{
 .nav-bar .more{
   position: absolute;
   right: 0.25rem;
-  top: 0.4rem;
+  top: 0rem;
   width: 0.36rem;
-  height: 0.08rem;
+  height: 100%;
   background: url('../assets/more.png') no-repeat center;
   background-size: 100%;
 }
@@ -268,4 +293,25 @@ img{
     height: 0.5rem;
     background: url('../assets/circle_more.png') no-repeat center;
     background-size: 100%;
+}
+
+.icon-more {
+    position: relative;
+    display: inline-block;
+    width: 0.19rem;
+    height: 0.14rem;
+    margin-left: 0.08rem;
+    border-top: 0.02rem solid #e60000;
+    border-bottom: 0.02rem solid #e60000;
+}
+
+.icon-more::before {
+    content: '';
+    display: block;
+    width: 0.19rem;
+    height: 0.02rem;
+    background-color: #e60000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }

@@ -13,8 +13,6 @@ import tempImg8 from '../assets/temp8.jpg';
 import tempImg9 from '../assets/temp9.jpg';
 import slogon from '../assets/slogon.jpg';
 
-// import Search from './search.js';
-
 export default class Home extends React.Component{
     componentWillMount(){
 
@@ -25,8 +23,8 @@ export default class Home extends React.Component{
                 <div className="home">
                     <div className="fixed-bar">
                         <em className="scan"></em>
-                        <Link className="search-box" to="/search">输入关键词，开始搜索</Link>
-                        <Link className="message" to="/"><i>10</i></Link>
+                        <Link className="search" to="/search">输入关键词，开始搜索</Link>
+                        <Link className="message" to="/messagecenter"><i>10</i></Link>
                     </div>
                     <div className="carousel-wrapper">
                         <Carousel>

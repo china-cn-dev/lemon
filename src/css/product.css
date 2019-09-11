@@ -242,35 +242,22 @@
     margin: 0 0.03rem;
 }
 
-.fixed-bottom {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1rem;
-    border-top: 1px solid #dadada;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    font-size: 0.22rem;
-}
-
-.fixed-bottom .left {
+.product .fixed-bottom .left {
     width: 2.8rem;
     padding: 0 0.25rem;
     display: flex;
     justify-content: space-around;
 }
 
-.fixed-bottom .message,
-.fixed-bottom .collect,
-.fixed-bottom .store {
+.product .fixed-bottom .message,
+.product .fixed-bottom .collect,
+.product .fixed-bottom .store {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.fixed-bottom .message::before {
+.product .fixed-bottom .message::before {
     content: '';
     display: block;
     width: 0.41rem;
@@ -280,7 +267,7 @@
     background-size: 100%;
 }
 
-.fixed-bottom .collect::before {
+.product .fixed-bottom .collect::before {
     content: '';
     display: block;
     width: 0.38rem;
@@ -290,7 +277,7 @@
     background-size: 100%;
 }
 
-.fixed-bottom .store::before {
+.product .fixed-bottom .store::before {
     content: '';
     display: block;
     width: 0.38rem;
@@ -300,7 +287,7 @@
     background-size: 100%;
 }
 
-.fixed-bottom .qq {
+.product .fixed-bottom .qq {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -312,7 +299,7 @@
     background-color: #ffd7d7;
 }
 
-.fixed-bottom .qq::before {
+.product .fixed-bottom .qq::before {
     content: '';
     display: block;
     width: 0.42rem;
@@ -322,7 +309,7 @@
     margin-right: 0.1rem;
 }
 
-.fixed-bottom .phone {
+.product .fixed-bottom .phone {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -334,7 +321,7 @@
     background-color: #e60000;
 }
 
-.fixed-bottom .phone::before {
+.product .fixed-bottom .phone::before {
     content: '';
     display: block;
     width: 0.45rem;

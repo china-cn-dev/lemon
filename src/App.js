@@ -14,6 +14,10 @@ import CompanyList from './views/companylist'
 import OfferList from './views/offerlist'
 import Product from './views/product'
 import ProductDetail from './views/productdetail'
+import MessageCenter from './views/messagecenter'
+import SystemMessage from './views/systemmessage'
+import Chat from './views/chat'
+import BusinessCard from './views/businesscard'
 
 function App() {
   return (
@@ -32,6 +36,10 @@ function App() {
           <Route path="/search/offer" component={OfferList}></Route>
           <Route exact path="/product/:id" component={Product}></Route>
           <Route path="/product/:id/details" component={ProductDetail}></Route>
+          <Route path="/messagecenter" component={MessageCenter}></Route>
+          <Route path="/systemmessage" component={SystemMessage}></Route>
+          <Route path="/chat" component={Chat}></Route>
+          <Route path="/card" component={BusinessCard}></Route>
         </Switch>
     </Router>
   );

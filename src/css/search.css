@@ -3,12 +3,6 @@
     border-bottom-width: 0;
 }
 
-.search .back {
-    position: absolute;
-    left: 0.25rem;
-    top: 0.28rem;
-}
-
 .search .nav-bar ul {
     display: flex;
     flex-direction: row;

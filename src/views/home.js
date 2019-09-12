@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link,NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Carousel} from 'antd-mobile';
 import FooterBar from './common/footerbar'
 import '../css/home.css';

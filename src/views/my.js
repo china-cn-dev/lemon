@@ -11,8 +11,7 @@ export default class My extends React.Component {
                     <span>我的</span>
                 </header>
                 <div className={styles.main}>
-                    <p>TEST CSS MODULE</p>
-                    <span>TEST SCSS</span>
+                    <span>My</span>
                 </div>
                 <FooterBar/>
             </div>

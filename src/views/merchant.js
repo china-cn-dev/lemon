@@ -12,6 +12,14 @@ export default class Merchant extends React.Component{
             open: false,
             status: false,
             editable: false,
+            companies:[
+                {id:1,url:t15,companyName:'北京情爱安东尼嘎啦有限公司',business:'钢材  设备机床  行车仪床  钢材贯通...',addr:'河北 廊坊',total:118953,vip:''},
+                {id:2,url:t16,companyName:'北京情安东爱尼嘎爱尼嘎爱嘎啦有限公司',business:'钢材  设备机床  行车仪床  钢材贯通...',addr:'河北 廊坊',total:118953,vip:'xmt'},
+                {id:3,url:t15,companyName:'北京情爱安东尼嘎啦有限公司',business:'钢材  设备机床  行车仪床  钢材贯通...',addr:'河北 廊坊',total:118953,vip:''},
+                {id:4,url:t16,companyName:'北京情安东爱尼嘎爱尼嘎爱嘎啦有限公司',business:'钢材  设备机床  行车仪床  钢材贯通...',addr:'河北 廊坊',total:118953,vip:'xmt'},
+                {id:5,url:t15,companyName:'北京情爱安东尼嘎啦有限公司',business:'钢材  设备机床  行车仪床  钢材贯通...',addr:'河北 廊坊',total:118953,vip:''},
+                {id:6,url:t16,companyName:'北京情安东爱尼嘎爱尼嘎爱嘎啦有限公司',business:'钢材  设备机床  行车仪床  钢材贯通...',addr:'河北 廊坊',total:118953,vip:'xmt'}
+            ],
             personal: ['家伙祖','情感','农业机械','仪器仪表','家装见','情感','机械','行业行业','健才','日用百货','我是一个字很多的行业','农业机械','母婴用品','农业机械','行业行业'],
             hot: ['家伙祖','情感','农业机械','仪器仪表','家装见','情感','机械','行业行业','健才','日用百货','我是一个字很多的行业','农业机械','母婴用品','农业机械','行业行业']
         }
@@ -58,54 +66,18 @@ export default class Merchant extends React.Component{
                 <Link to="/ranking"><img className="focus-img" src={ranking} alt=""/></Link>
                 <div className="companies">
                     <ul>
-                        <li>
+                        {this.state.companies.map((data,idx)=>(<li key={idx}>
                             <div className="left">
-                                <img src={t15} alt=""/>
+                                <img src={data.url} alt=""/>
                             </div>
                             <div className="right">
                                 <div>
-                                    <p className="caption">北京情爱安东尼嘎啦有限公司</p>
-                                    <span className="main-business">主营：钢材  设备机床  行车仪床  钢材贯通...</span>
+                                    <p className={`caption ${data.vip}`}>{data.companyName}</p>
+                                    <span className="main-business">主营：{data.business}</span>
                                 </div>
-                                <div className="line"><span>河北 廊坊</span><span>118953件产品</span></div>
+                                <div className="line"><span>{data.addr}</span><span>{data.total}件产品</span></div>
                             </div>
-                        </li>
-                        <li>
-                            <div className="left">
-                                <img src={t16} alt=""/>
-                            </div>
-                            <div className="right">
-                                <div>
-                                    <p className="caption xmt">北京情安东爱尼嘎爱尼嘎爱嘎啦有限公司</p>
-                                    <span className="main-business">主营：钢材  设备机床  行车仪床  钢材贯通...</span>
-                                </div>
-                                <div className="line"><span>河北 廊坊</span><span>118953件产品</span></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="left">
-                                <img src={t15} alt=""/>
-                            </div>
-                            <div className="right">
-                                <div>
-                                    <p className="caption">北京情爱安东尼嘎啦有限公司</p>
-                                    <span className="main-business">主营：钢材  设备机床  行车仪床  钢材贯通...</span>
-                                </div>
-                                <div className="line"><span>河北 廊坊</span><span>118953件产品</span></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="left">
-                                <img src={t16} alt=""/>
-                            </div>
-                            <div className="right">
-                                <div>
-                                    <p className="caption xmt">北京情安东爱尼嘎爱尼嘎爱嘎啦有限公司</p>
-                                    <span className="main-business">主营：钢材  设备机床  行车仪床  钢材贯通...</span>
-                                </div>
-                                <div className="line"><span>河北 廊坊</span><span>118953件产品</span></div>
-                            </div>
-                        </li>
+                        </li>))}
                     </ul>
                 </div>
                 {

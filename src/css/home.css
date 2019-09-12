@@ -30,7 +30,7 @@
     position: relative;
 }
 
-.fixed-bar .message i {
+.fixed-bar .message em {
     position: absolute;
     width: 0.26rem;
     height: 0.26rem;

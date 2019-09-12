@@ -78,7 +78,6 @@ img{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 0.24rem;
   color: black;
   position: fixed;
   bottom: 0;
@@ -136,25 +135,25 @@ img{
   background-size: 100%;
 }
 
-.app footer .current.home::before{
+.app footer .active.home::before{
   background: url('../assets/home_active.png') no-repeat center;
   background-size: 100%;
 }
 
-.app footer .current.category::before{
+.app footer .active.category::before{
   background: url('../assets/category_active.png') no-repeat center;
   background-size: 100%;
 }
-.app footer .current.discover::before{
+.app footer .active.discover::before{
   background: url('../assets/discover_active.png') no-repeat center;
   background-size: 100%;
 }
-.app footer .current.my::before{
+.app footer .active.my::before{
   background: url('../assets/my_active.png') no-repeat center;
   background-size: 100%;
 }
 
-.app footer .current{
+.app footer .active{
   color: #e60000;
 }
 

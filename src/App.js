@@ -36,8 +36,8 @@ function App() {
           <Route path="/search/offer" component={OfferList}></Route>
           <Route exact path="/product/:id" component={Product}></Route>
           <Route path="/product/:id/details" component={ProductDetail}></Route>
-          <Route path="/messagecenter" component={MessageCenter}></Route>
-          <Route path="/systemmessage" component={SystemMessage}></Route>
+          <Route exact path="/message" component={MessageCenter}></Route>
+          <Route path="/message/system" component={SystemMessage}></Route>
           <Route path="/chat" component={Chat}></Route>
           <Route path="/card" component={BusinessCard}></Route>
         </Switch>

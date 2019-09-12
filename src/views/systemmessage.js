@@ -17,7 +17,7 @@ export default class MessageCenter extends React.Component{
         return(
             <div className="system-message">
                 <header className="nav-bar">
-                    <Link className="back" to="/messagecenter"></Link>
+                    <Link className="back" to="/message"></Link>
                     <span>系统消息</span>
                     <button className="ignore-all"><span>忽略全部</span></button>
                 </header>

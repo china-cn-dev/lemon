@@ -22,7 +22,7 @@ export default class MessageCenter extends React.Component{
     }
     onMessageClick(e){
         if('system' === e){
-            this.props.history.push('/systemmessage');
+            this.props.history.push('/message/system');
         }else{
             this.props.history.push('/chat',{id:e});
         }

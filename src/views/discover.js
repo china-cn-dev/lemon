@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, NavLink, Route, Switch } from 'react-router-dom'
+import FooterBar from './common/footerbar'
 import '../css/discover.css'
 import Purchase from './purchase'
 import Business from './business'
@@ -26,12 +27,7 @@ export default class Discover extends React.Component{
                         <Route path="/discover/merchant" component={Merchant}></Route>
                     </Switch>
                 </div>
-                <footer>
-                    <NavLink exact to="/" className="home" activeClassName="current">首页</NavLink>
-                    <NavLink to="/category" className="category" activeClassName="current">分类</NavLink>
-                    <NavLink to="/discover" className="discover" activeClassName="current">发现</NavLink>
-                    <NavLink to="/my" className="my" activeClassName="current">个人</NavLink>
-                </footer>
+                <FooterBar/>
             </div>
         );
     }

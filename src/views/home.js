@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link,NavLink } from 'react-router-dom'
-import '../css/home.css';
 import { Carousel} from 'antd-mobile';
+import FooterBar from './common/footerbar'
+import '../css/home.css';
 import tempImg1 from '../assets/temp1.jpg';
 import tempImg2 from '../assets/temp2.jpg';
 import tempImg3 from '../assets/temp3.jpg';
@@ -22,9 +23,9 @@ export default class Home extends React.Component{
             <div className="app">
                 <div className="home">
                     <div className="fixed-bar">
-                        <em className="scan"></em>
+                        <i className="scan"></i>
                         <Link className="search" to="/search">输入关键词，开始搜索</Link>
-                        <Link className="message" to="/messagecenter"><i>10</i></Link>
+                        <Link className="message" to="/message"><em>10</em></Link>
                     </div>
                     <div className="carousel-wrapper">
                         <Carousel>
@@ -160,12 +161,7 @@ export default class Home extends React.Component{
                     </div>
                 </div>
                 </div>
-                <footer>
-                    <NavLink exact to="/" className="home" activeClassName="current">首页</NavLink>
-                    <NavLink to="/category" className="category" activeClassName="current">分类</NavLink>
-                    <NavLink to="/discover" className="discover" activeClassName="current">发现</NavLink>
-                    <NavLink to="/my" className="my" activeClassName="current">个人</NavLink>
-                </footer>
+                <FooterBar/>
             </div>
         );
     }

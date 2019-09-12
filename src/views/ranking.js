@@ -7,9 +7,11 @@ export default class Ranking extends React.Component{
     render(){
         return(
             <div className="ranking">
-                <div className="nav-bar">
-                    <Link to="/discover/merchant" className="back"></Link>
+                <div className="ranking-bg">
                     <img className="focus-img" src={tmp20} alt=""/>
+                    <div className="nav-bar">
+                        <Link to="/discover/merchant" className="back"></Link>
+                    </div>
                 </div>
                 <nav>
                     <ul>

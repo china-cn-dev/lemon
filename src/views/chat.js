@@ -14,7 +14,7 @@ export default class MessageCenter extends React.Component{
         return(
             <div className="chat-message">
                 <header className="nav-bar fixed-top">
-                    <Link className="back" to="/messagecenter"></Link>
+                    <Link className="back" to="/message"></Link>
                     <span>北京奇志浩天科技有限公司</span>
                     <button className="contact"><Link to="/card"><img src={contact} alt=""/></Link></button>
                 </header>

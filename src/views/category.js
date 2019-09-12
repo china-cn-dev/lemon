@@ -1,5 +1,6 @@
 import React from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import FooterBar from './common/footerbar'
 import tempImg from '../assets/temp10.jpg';
 import '../css/category.css'
 export default class Category extends React.Component{
@@ -44,17 +45,12 @@ export default class Category extends React.Component{
                         <div className="right">
                             <img src={tempImg} alt=""/>
                             <div className="sub-category">
-                                {this.state.subCategories.map((item,index)=>(<Link key={index} to="">{item}</Link>))}
+                                {this.state.subCategories.map((item,index)=>(<Link key={index} to={{pathname:'/search/product', state:{kw: item}}}>{item}</Link>))}
                             </div>
                         </div>
                     </div>
                 </div>
-                <footer>
-                    <NavLink exact to="/" className="home" activeClassName="current">首页</NavLink>
-                    <NavLink to="/category" className="category" activeClassName="current">分类</NavLink>
-                    <NavLink to="/discover" className="discover" activeClassName="current">发现</NavLink>
-                    <NavLink to="/my" className="my" activeClassName="current">个人</NavLink>
-                </footer>
+                <FooterBar/>
             </div>
         );
     }

@@ -9,4 +9,49 @@ const pool = mysql.createPool({
     database: 'lemon'
 });
 
-module.exports = pool;
+pool.on('acquire', (connection) => {
+    console.log('connection %d acquird', connection.threadId);
+});
+
+pool.on('enqueue', () => {
+    console.log('Waiting for available connection slot');
+});
+
+pool.on('release', (connection) => {
+    console.log('Connection %d released', connection.threadId);
+});
+
+pool.on('connection', () => {
+    console.log('connected');
+});
+
+class DBManager {
+    constructor() {
+        this.instance = null;
+        console.log(`DBManager.constructor`)
+    }
+    query(sql, args = null) {
+        return new Promise((resolve, reject) => {
+            pool.getConnection((err, connection) => {
+                if (err) {
+                    return reject(err);
+                }
+                connection.query(sql, args, (err, results, fields) => {
+                    connection.release();
+                    if (err) {
+                        return reject(err);
+                    }
+                    resolve(results);
+                });
+            });
+        });
+    }
+    static getInstance() {
+        if (!this.instance) {
+            this.instance = new DBManager();
+        }
+        return this.instance;
+    }
+};
+
+module.exports = DBManager;

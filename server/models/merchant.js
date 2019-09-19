@@ -2,7 +2,7 @@ const DBManager = require('../db');
 
 async function fn_query() {
     try {
-        const sql = 'SELECT buy.id,buy.title,LEFT(buy.expire_date,10) as expire_date,buy.amount,industry.name_cn FROM buy LEFT JOIN industry ON buy.industry=industry.industry_id';
+        const sql = 'SELECT c.cid,c.cname,c.goods,c.addr,c.business,c.logo,m.type FROM company c JOIN `member` m on c.cid=m.cid;';
         let results = await DBManager.getInstance().query(sql);
         return results;
     } catch (err) {
@@ -13,3 +13,5 @@ async function fn_query() {
 module.exports = {
     query: fn_query
 }
+
+

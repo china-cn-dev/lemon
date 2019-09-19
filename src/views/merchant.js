@@ -5,6 +5,7 @@ import '../css/discover.css'
 import ranking from '../assets/ranking.jpg'
 import t15 from '../assets/temp15.jpg'
 import t16 from '../assets/temp16.png'
+import Utils from '../utils'
 export default class Merchant extends React.Component{
     constructor(props){
         super(props)
@@ -12,14 +13,7 @@ export default class Merchant extends React.Component{
             open: false,
             status: false,
             editable: false,
-            companies:[
-                {id:1,url:t15,companyName:'北京情爱安东尼嘎啦有限公司',business:'钢材  设备机床  行车仪床  钢材贯通...',addr:'河北 廊坊',total:118953,vip:''},
-                {id:2,url:t16,companyName:'北京情安东爱尼嘎爱尼嘎爱嘎啦有限公司',business:'钢材  设备机床  行车仪床  钢材贯通...',addr:'河北 廊坊',total:118953,vip:'xmt'},
-                {id:3,url:t15,companyName:'北京情爱安东尼嘎啦有限公司',business:'钢材  设备机床  行车仪床  钢材贯通...',addr:'河北 廊坊',total:118953,vip:''},
-                {id:4,url:t16,companyName:'北京情安东爱尼嘎爱尼嘎爱嘎啦有限公司',business:'钢材  设备机床  行车仪床  钢材贯通...',addr:'河北 廊坊',total:118953,vip:'xmt'},
-                {id:5,url:t15,companyName:'北京情爱安东尼嘎啦有限公司',business:'钢材  设备机床  行车仪床  钢材贯通...',addr:'河北 廊坊',total:118953,vip:''},
-                {id:6,url:t16,companyName:'北京情安东爱尼嘎爱尼嘎爱嘎啦有限公司',business:'钢材  设备机床  行车仪床  钢材贯通...',addr:'河北 廊坊',total:118953,vip:'xmt'}
-            ],
+            companies:[],
             personal: ['家伙祖','情感','农业机械','仪器仪表','家装见','情感','机械','行业行业','健才','日用百货','我是一个字很多的行业','农业机械','母婴用品','农业机械','行业行业'],
             hot: ['家伙祖','情感','农业机械','仪器仪表','家装见','情感','机械','行业行业','健才','日用百货','我是一个字很多的行业','农业机械','母婴用品','农业机械','行业行业']
         }
@@ -72,7 +66,7 @@ export default class Merchant extends React.Component{
                             </div>
                             <div className="right">
                                 <div>
-                                    <p className={`caption ${data.vip}`}>{data.companyName}</p>
+                                    <p className={`caption ${Utils.parseMemberType(data.vip)}`}>{data.companyName}</p>
                                     <span className="main-business">主营：{data.business}</span>
                                 </div>
                                 <div className="line"><span>{data.addr}</span><span>{data.total}件产品</span></div>
@@ -116,5 +110,19 @@ export default class Merchant extends React.Component{
                 </div>
             </div>
         )
+    }
+    componentDidMount(){
+        fetch('/api/merchants').then(resp=>resp.json()).then(data=>{
+            if(data.code === 200){
+                data.data.forEach((item,idx)=>{
+                    if(idx % 2 === 0){
+                        item.url = t15;
+                    }else{
+                        item.url = t16;
+                    }
+                });
+                this.setState({companies: data.data});
+            }
+        }).catch(e=>{console.log(e)})
     }
 }

@@ -6,16 +6,7 @@ export default class Purchase extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            list: [
-                {id:11,title:'采购大功率超高速点击',industry:'油泵/油嘴',quote:16251,date:'2017-12-16'},
-                {id:12,title:'采购大功率超高速点击',industry:'油泵/油嘴',quote:16251,date:'2017-12-16'},
-                {id:13,title:'采购大功率超高速点击',industry:'油泵/油嘴',quote:16251,date:'2017-12-16'},
-                {id:14,title:'采购大功率超高速点击',industry:'油泵/油嘴',quote:16251,date:'2017-12-16'},
-                {id:15,title:'采购大功率超高速点击',industry:'油泵/油嘴',quote:16251,date:'2017-12-16'},
-                {id:16,title:'采购大功率超高速点击',industry:'油泵/油嘴',quote:16251,date:'2017-12-16'},
-                {id:17,title:'采购大功率超高速点击',industry:'油泵/油嘴',quote:16251,date:'2017-12-16'},
-                {id:18,title:'采购大功率超高速点击',industry:'油泵/油嘴',quote:16251,date:'2017-12-16'},
-            ]
+            list: []
         }
     }
     render(){
@@ -34,5 +25,12 @@ export default class Purchase extends React.Component{
                 </ul>
             </div>
         );
+    }
+    componentDidMount(){
+        fetch('/api/purchases').then(resp=>resp.json()).then(data=>{
+            if(data.code === 200){
+                this.setState({ list:data.data });
+            }
+        }).catch(e=>{console.log(e)})
     }
 }
